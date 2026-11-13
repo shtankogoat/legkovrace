@@ -2,12 +2,13 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
+<script>document.write('<base href="'+(location.protocol==='file:'?'./':location.hostname.endsWith('github.io')?'/'+location.pathname.split('/')[1]+'/':'/')+'">')</script>
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://kinescope.io; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,follow">
 <meta name="theme-color" content="#14213a">
-<title>Сошли с трассы — Гонка Легкова 2027</title>
+<title>Гонка Легкова 2027 — Сошли с трассы</title>
 <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -33,23 +34,30 @@ p{opacity:.7;font-size:clamp(16px,1.5vw,20px);margin:16px 0 34px;max-width:560px
 .btn.g{background:transparent;border:2px solid rgba(255,255,255,.4)}
 a,button{cursor:pointer}.btn.g:hover{border-color:#fff;background:transparent}
 :focus-visible{outline:3px solid var(--red);outline-offset:3px}
+main{align-items:center;text-align:center}
+header{display:flex;justify-content:center}
+.code{font-size:clamp(110px,18vw,260px)!important}
+.track{width:min(420px,70%);margin:26px auto!important}
+h1{font-size:clamp(22px,3vw,40px)!important}
+p{margin-left:auto!important;margin-right:auto!important}
+.btns{justify-content:center}
 </style>
 </head>
 <body>
 <canvas id="s"></canvas>
-<header><a href="index.html" aria-label="Гонка Легкова 2027 — на главную"><img src="img/mark.svg" alt="">Гонка Легкова 2027</a></header>
+<header><a href="./" aria-label="Гонка Легкова 2027 — на главную"><img src="img/mark.svg" alt="">Гонка Легкова 2027</a></header>
 <main>
  <div class="code" id="code">404</div>
  <div class="track"></div>
  <h1>Кажется, вы сошли с трассы</h1>
- <p id="msg">Такой страницы нет или она ещё в разработке. Возвращайтесь на лыжню — старт уже скоро.</p>
- <div class="btns"><a class="btn" href="index.html">На главную →</a><a class="btn g" href="javascript:history.back()">Назад</a></div>
+ <p id="msg">Такой страницы нет или она ещё в разработке. Возвращайтесь на основной сайт — старт уже скоро.</p>
+ <div class="btns"><a class="btn" href="./">На главную →</a></div>
 </main>
 <script>
 // same page handles 500/503 via ?code=
 const M={500:['Падение на спуске','На сервере что-то пошло не так. Мы уже поднимаемся — попробуйте через минуту.'],503:['Трасса на подготовке','Идут технические работы. Скоро вернёмся на лыжню!'],403:['Вход только для участников','У вас нет доступа к этой странице.']};
 const c=new URLSearchParams(location.search).get('code');
-if(M[c]){code.textContent=c;document.querySelector('h1').textContent=M[c][0];msg.textContent=M[c][1];document.title=M[c][0]+' — Гонка Легкова 2027'}
+if(M[c]){code.textContent=c;document.querySelector('h1').textContent=M[c][0];msg.textContent=M[c][1];document.title='Гонка Легкова 2027 — '+M[c][0]}
 const cv=document.getElementById('s'),x=cv.getContext('2d'),R=Math.min(devicePixelRatio||1,2);let F=[];
 function mk(w,h,y){const z=Math.random();return{x:Math.random()*w,y,r:.6+z*z*2.6,s:.25+z*1.1,a:.2+z*.6,w:Math.random()*6}}
 function rs(){const w=innerWidth,h=innerHeight;cv.width=w*R;cv.height=h*R;x.setTransform(R,0,0,R,0,0);F=Array.from({length:Math.round(w*h/12000)},()=>mk(w,h,Math.random()*h))}
