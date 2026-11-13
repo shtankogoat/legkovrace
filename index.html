@@ -136,7 +136,7 @@ header{position:absolute;top:0;left:0;right:0;z-index:20;color:#fff}
 .vtxt{display:flex;flex-direction:column;justify-content:center;gap:26px}.vtxt h2{margin-top:-.14em;font-size:clamp(28px,3vw,50px)}.vtxt p{opacity:.7;margin-top:12px;max-width:460px}
 .vgrid{display:grid;grid-template-columns:1fr minmax(0,1.7fr);gap:clamp(24px,4vw,72px);align-items:stretch;margin-bottom:44px}
 .stats{display:grid;grid-template-columns:repeat(3,auto);justify-content:space-between;gap:20px}
-@media(max-width:1000px){.vgrid{grid-template-columns:minmax(0,1fr)}.vgrid>*{min-width:0}.vgrid .vid{min-height:0;width:100%;aspect-ratio:16/9}.hist{flex-wrap:nowrap}.vgrid .vid{order:2}.stats{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:1000px){.vgrid{grid-template-columns:minmax(0,1fr)}.vgrid>*{min-width:0}.vgrid .vid{min-height:0!important;height:auto!important;width:100%;aspect-ratio:16/9!important;align-self:start!important}.hist{flex-wrap:nowrap}.vgrid .vid{order:2}.stats{grid-template-columns:repeat(3,1fr)}}
 .stats div{border-top:2px solid rgba(255,255,255,.25);padding-top:12px}
 .stats b{font-family:Unbounded;font-size:clamp(24px,2.2vw,38px);white-space:nowrap;font-weight:900;display:block;color:#fff}
 .stats span{font-size:15px;opacity:.7}
@@ -208,7 +208,7 @@ header{position:absolute;top:0;left:0;right:0;z-index:20;color:#fff}
 .pc b{display:block;font-family:Unbounded;font-size:20px;margin-bottom:6px}
 .pc p{color:var(--mut);font-size:15px;line-height:1.45}
 @media(hover:none){.card:hover img,.am:hover img,.vid:hover img,.strip img:hover{transform:none!important}.card:hover,.am:hover,.pc:hover{transform:none!important}}
-@media(max-width:640px){.hero>img{animation:none;transform:none}.soc a{backdrop-filter:none}.strip{will-change:transform}
+@media(max-width:640px){.hero>img{animation:none;transform:none}.hero{min-height:100svh!important;height:100svh}.hero .wrap{padding-bottom:max(28px,env(safe-area-inset-bottom))!important;padding-top:110px}.hero .sub{margin:16px 0 22px}.soc a{backdrop-filter:none}.strip{will-change:transform}
 .logos{grid-template-columns:minmax(0,1fr)!important}.pc>*{min-width:0}.pc b{font-size:17px;overflow-wrap:anywhere}.pc{padding:16px;gap:16px}.pl{width:80px;height:80px;font-size:12px}.pl img{height:64px}}
 .pjoin{margin-top:40px}.pjoin .btn{width:100%;justify-content:center;padding:26px}
 
