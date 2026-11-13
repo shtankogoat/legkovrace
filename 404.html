@@ -2,7 +2,11 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://kinescope.io; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#14213a">
 <title>Сошли с трассы — Гонка Легкова 2027</title>
 <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
@@ -33,7 +37,7 @@ a,button{cursor:pointer}.btn.g:hover{border-color:#fff;background:transparent}
 </head>
 <body>
 <canvas id="s"></canvas>
-<header><a href="index.html"><img src="img/mark.svg" alt="">Гонка Легкова 2027</a></header>
+<header><a href="index.html" aria-label="Гонка Легкова 2027 — на главную"><img src="img/mark.svg" alt="">Гонка Легкова 2027</a></header>
 <main>
  <div class="code" id="code">404</div>
  <div class="track"></div>

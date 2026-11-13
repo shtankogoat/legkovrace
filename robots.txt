@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# PLACEHOLDER domain: update once the real domain is live
+Sitemap: https://legkovrace.ru/sitemap.xml
