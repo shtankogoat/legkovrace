@@ -160,9 +160,9 @@ header a,header button,header nav{pointer-events:auto}
 .vid img{width:100%;height:100%;object-fit:cover;transition:.6s}
 .vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .vid:hover img{transform:scale(1.04)}
-.vid .play{position:absolute;inset:0;margin:auto;width:110px;height:110px;border-radius:50%;background:var(--red);display:grid;place-items:center;box-shadow:0 0 0 0 rgba(196,10,26,.6);animation:pulse 2s infinite}
+.vid .play{position:absolute;inset:0;margin:auto;width:64px;height:64px;border-radius:50%;background:var(--red);display:grid;place-items:center;box-shadow:0 0 0 0 rgba(196,10,26,.6);animation:pulse 2s infinite}
 @keyframes pulse{70%{box-shadow:0 0 0 30px rgba(196,10,26,0)}100%{box-shadow:0 0 0 0 rgba(196,10,26,0)}}
-.vid .play svg{width:34px;margin-left:6px}
+.vid .play svg{width:24px;margin-left:3px}
 .strip img{box-shadow:none;border:6px solid #fff;cursor:default}.strip{display:flex;gap:14px;margin-top:0;animation:mq 50s linear infinite;width:max-content}
 .strip img{height:180px;width:270px;object-fit:cover;border-radius:16px}
 @keyframes mq{to{transform:translateX(-50%)}}
@@ -175,8 +175,8 @@ header a,header button,header nav{pointer-events:auto}
 .am{background:#fff;border-radius:var(--r);overflow:hidden;transition:.3s}
 .am:hover{transform:translateY(-6px);box-shadow:0 24px 40px -20px rgba(20,33,58,.35)}
 .am .im{aspect-ratio:3/4;background:var(--ice2);overflow:hidden}
-.am img{width:100%;height:100%;object-fit:cover;object-position:top;filter:grayscale(.3);transition:.4s}
-.am:hover img{filter:none;transform:scale(1.05)}
+.am img{width:100%;height:100%;object-fit:cover;object-position:top;transition:.4s}
+.am:hover img{transform:scale(1.05)}
 .am div.t{padding:16px}
 .am b{font-family:Unbounded;font-size:14px;display:block;margin-bottom:6px;line-height:1.2}
 .am span{font-size:12px;color:var(--mut);display:block;line-height:1.35;padding-left:12px;position:relative;margin-top:5px}.am span:before{content:"";position:absolute;left:0;top:.5em;width:5px;height:5px;border-radius:50%;background:var(--red)}
@@ -186,9 +186,9 @@ header a,header button,header nav{pointer-events:auto}
 .mp{padding:110px 0}
 .mphead{display:grid;grid-template-columns:1.1fr 1fr;gap:30px;margin-bottom:40px;align-items:stretch}.mright{text-align:right;justify-self:end;max-width:600px;display:flex;flex-direction:column;justify-content:space-between;align-self:stretch;padding:.2em 0 .1em}.mright .place{margin:0 0 10px}.mright p{margin:0;color:var(--mut)!important}@media(max-width:1000px){.mright{text-align:left;justify-self:start}}
 .place{font-family:Unbounded;font-weight:700;color:var(--red);font-size:clamp(18px,2vw,24px);text-transform:uppercase;margin-top:14px}
-.mapbox{display:grid;grid-template-columns:minmax(0,867px) 1fr;gap:18px}
+.mapbox{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:18px;align-items:stretch}
 .map{position:relative;border-radius:var(--r);overflow:hidden;background:#e8eef6}
-.msvg{display:block;width:100%;height:auto}.flow{animation:flow 1.2s linear infinite}@keyframes flow{to{stroke-dashoffset:-24}}
+.msvg{display:block;width:100%;height:auto;font-family:Manrope,sans-serif}.flow{animation:flow 1.2s linear infinite}@keyframes flow{to{stroke-dashoffset:-24}}
 .dist{background:var(--red);border-radius:16px;padding:16px 18px;margin-top:auto}.info ul{margin-bottom:24px}.dist span{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.08em;opacity:.85}.dist b{font-family:Unbounded;font-size:30px}
 .pin{position:absolute;transform:translate(-50%,-50%);width:34px;height:34px;border-radius:50%;background:var(--red);border:3px solid #fff;cursor:pointer;box-shadow:0 6px 16px rgba(0,0,0,.25);display:grid;place-items:center;color:#fff;font-weight:800;font-size:13px;transition:.2s}
 .pin:before{content:"";position:absolute;inset:-8px;border-radius:50%;border:2px solid var(--red);animation:ring 2s infinite;opacity:0}
@@ -219,9 +219,6 @@ header a,header button,header nav{pointer-events:auto}
 @media(hover:hover){.partner-lead:hover,.pc:hover{box-shadow:inset 0 0 0 2px #c6d3e7}.partner-lead:hover img,.pc:hover .lg{transform:translateY(-5px)}}
 .partner-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
 .partner-lead,.pc{border:1px solid var(--ice2)}
-.partner-grid>.pc:nth-child(2){grid-column:3/5;grid-row:1}
-.partner-grid>.pc:nth-child(3){grid-column:3/5;grid-row:2}
-.partner-grid>.pc:nth-child(2) img,.partner-grid>.pc:nth-child(3) img{max-width:min(100%,320px);max-height:100px}
 .pc .lg{display:flex;align-items:center;justify-content:center;width:100%;height:100px}
 .pc .lg img{display:block;max-width:min(100%,240px);max-height:80px;width:auto;height:auto}
 .pc .lg .rso{filter:brightness(0) saturate(100%) invert(12%) sepia(40%) saturate(1800%) hue-rotate(200deg) brightness(.9)}
@@ -274,12 +271,12 @@ header a,header button,header nav{pointer-events:auto}
 .event b{display:block;color:var(--navy);font-size:15px;line-height:1.25}
 .event span{display:block;margin-top:5px;color:var(--mut);font-size:13px;line-height:1.45}
 .prow:not(:last-child) td{border-bottom:1px solid var(--ice2)}
-.prow.entry .event{background:var(--ice);border-radius:13px;padding:9px 12px}
+.prow.entry .event{background:var(--ice);border-radius:10px;padding:8px 12px}
 .prow.entry .ptime::after{background:var(--red)}
-.prow.entry .event b{font-family:Unbounded,sans-serif;font-size:clamp(14px,1.45vw,20px);letter-spacing:-.025em}
-.prow .event .btn{flex:none;min-height:40px;padding:8px 14px;font:inherit;font-size:13px;font-weight:800;text-transform:none;box-shadow:none}
-.prow.love .event{background:#fff0f4}
-.prow.love .event b{color:#94183e}
+.prow.entry .event b{font-family:Manrope,sans-serif;font-size:15px;font-weight:800;line-height:1.4;letter-spacing:0}
+.prow .event .btn{flex:none;min-height:34px;padding:6px 12px;font:inherit;font-size:12px;font-weight:800;text-transform:none;box-shadow:none}
+.prow.love.entry .event{background:#fff0f4}
+.prow.love.entry .event b{color:#94183e}
 .prow.love .event .btn,.prow.love .ptime::after{background:#a21848}
 .pnote{margin-top:22px;padding-left:16px;border-left:2px solid var(--ice2);max-width:75ch;font-size:14px;color:var(--mut)}
 .pnote p{margin-bottom:6px}
@@ -298,17 +295,15 @@ header a,header button,header nav{pointer-events:auto}
  .schedule thead th:last-child,.schedule td{padding-left:11px}
  .schedule .ptime{font-size:11px;padding-right:6px;white-space:normal}
  .schedule .event{flex-wrap:wrap}
- .prow.entry .event{padding:9px}
- .prow .event .btn{min-height:44px;padding-inline:11px}
+ .prow.entry .event{padding:8px 10px}
+ .prow .event .btn{min-height:40px;padding-inline:12px}
 }
 @media(max-width:640px){
  .pg{padding:68px 0}
  .past+.pg{padding-top:104px}
  .partner-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
  .partner-lead{grid-column:1/-1;grid-row:auto;min-height:260px;gap:20px;padding:28px 20px}
- .partner-grid>.pc:nth-child(2),.partner-grid>.pc:nth-child(3){grid-column:auto;grid-row:auto}
- .partner-grid>.pc:nth-child(2) img,.partner-grid>.pc:nth-child(3) img{max-width:100%;max-height:64px}
- .partner-lead img{height:150px}
+   .partner-lead img{height:150px}
  .partner-lead .pr{font-size:10px}
  .pc{min-height:170px;padding:20px 12px;gap:12px}
  .pc .lg{height:80px}
@@ -355,6 +350,144 @@ footer .wrap{font-size:15px}
  .soc a{width:36px;height:36px}
  .reg:before{font-size:160px}
 }
+
+.course-key{display:flex;align-items:center;gap:10px;margin-top:auto;padding-top:24px;font-size:13px;opacity:.85}
+.course-key span{width:30px;height:5px;background:var(--red);border-radius:4px}
+.info li button{display:flex;align-items:center;gap:10px;background:none;border:0;color:inherit;font:inherit;text-align:left;padding:6px 0;width:100%;cursor:pointer;opacity:.65}
+.info li button.on,.info li button:hover{opacity:1}
+.info li{opacity:1}
+.mapbox.in .course-line{animation:course-reveal 2.4s ease-out both}
+@keyframes course-reveal{from{stroke-dasharray:1;stroke-dashoffset:1}to{stroke-dasharray:1;stroke-dashoffset:0}}
+@media(max-width:1200px){.mapbox{grid-template-columns:1fr}.mapbox .info{display:block}.course-key{margin-top:12px}.mapbox .info ul{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.mapbox .info ul{grid-template-columns:1fr}.mapbox .info{padding:22px}.map .pin{width:26px;height:26px;font-size:11px}.map-canvas{min-width:0}.map{overflow:hidden}.mapbox .info li button{padding:10px 0}}
+@media(prefers-reduced-motion:reduce){.mapbox.in .course-line{animation:none}}
+
+
+.map-canvas{position:relative;width:100%}
+.map .pin{width:24px;height:24px;border:2px solid #fff;font-size:10px;box-shadow:0 2px 6px #14213a30}
+.map .pin:before{display:none}
+.map .pin:after{content:"";position:absolute;inset:-10px;border-radius:50%}
+.map .pin.on,.map .pin:hover{transform:translate(-50%,-50%) scale(1.08)}
+.map .pin:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+.mapbox .map{align-self:start}
+@media(min-width:1201px){.mapbox .info ul{max-height:240px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#ffffff50 transparent;padding-right:8px}}
+
+
+
+.pt{padding:72px 0}
+.pt .hrow{margin-bottom:28px}
+.partner-feature{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;align-items:center;margin-bottom:24px}
+.partner-feature .partner-lead{grid-column:1;grid-row:auto;height:148px;min-height:148px;padding:18px;border-radius:12px;gap:0}
+.partner-feature .partner-lead:before{display:none}
+.partner-feature .partner-lead img{height:94px;width:auto;max-width:100%;object-fit:contain}
+.partner-story{grid-column:2/-1;max-width:780px;padding:0 24px}
+.partner-story .pr{font-size:10px;color:var(--mut);margin:0 0 8px}
+.partner-story h3{font-size:26px;margin:0 0 8px}
+.partner-story p{font-size:15px;line-height:1.5;color:var(--mut);margin:0 0 10px;max-width:64ch}
+.partner-link{font-size:13px;font-weight:800;text-underline-offset:4px}
+.partner-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.partner-main{margin-bottom:12px}
+.partner-grid .pc{flex:0 0 calc((100% - 48px)/5);height:148px;min-height:148px;padding:16px;border-radius:12px;gap:8px}
+.partner-grid .pc .lg{height:66px;flex:none}
+.partner-grid .pc .lg img{max-width:min(100%,190px);max-height:60px}
+.partner-grid .pc .tl{font-size:clamp(17px,1.7vw,25px)}
+.partner-grid .pc b{font-size:11px;line-height:1.4}
+.partner-grid .pc .pr{font-size:9px;line-height:1.4}
+.partner-media{margin-top:28px;padding-top:22px;border-top:1px solid var(--ice2)}
+.partner-media h3{font-size:16px;margin:0 0 16px}
+.partner-media .partner-grid{justify-content:flex-start}
+@media(max-width:900px){
+ .partner-feature{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .partner-story{padding:0 12px}
+ .partner-grid .pc{flex-basis:calc((100% - 24px)/3)}
+}
+@media(max-width:600px){
+ .pt{padding:52px 0}
+ .pt .hrow{margin-bottom:22px}
+ .partner-feature{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 12px;margin-bottom:20px}
+ .partner-feature .partner-lead{height:132px;min-height:132px}
+ .partner-feature .partner-lead img{height:80px}
+ .partner-story{grid-column:1/-1;padding:0}
+ .partner-story h3{font-size:23px}
+ .partner-story p{font-size:14px}
+ .partner-grid .pc{flex-basis:calc((100% - 12px)/2);height:132px;min-height:132px;padding:12px}
+ .partner-grid .pc .lg{height:56px}
+ .partner-grid .pc .lg img{max-height:52px}
+ .partner-grid .pc .tl{font-size:20px}
+ .partner-media{margin-top:22px;padding-top:18px}
+}
+@media(prefers-reduced-motion:reduce){.partner-lead img,.pc .lg{transition:none}}
+
+/* Partner tiers follow the supplied size hierarchy. */
+.partner-feature{grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:clamp(24px,4vw,56px);margin-bottom:24px}
+.partner-feature .partner-lead{height:280px;min-height:280px;padding:32px;border-radius:16px}
+.partner-feature .partner-lead img{height:190px;max-width:100%}
+.partner-story{grid-column:2;padding:0;max-width:620px}
+.partner-story h3{font-size:32px;margin-bottom:12px}
+.partner-story p{font-size:16px;line-height:1.6;margin-bottom:16px}
+.partner-main{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:18px}
+.partner-main .pc{height:176px;min-height:176px;padding:20px}
+.partner-main .pc .lg{height:80px}
+.partner-main .pc .lg img{max-height:72px;max-width:min(100%,220px)}
+.partner-support{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;justify-content:start}
+.partner-support .pc{height:128px;min-height:128px;padding:12px;gap:6px}
+.partner-support .pc .lg{height:54px}
+.partner-support .pc .lg img{max-height:48px;max-width:100%}
+.partner-support .pc .tl{font-size:20px}
+.partner-support .pc .pr{font-size:8px}
+.partner-media{margin-top:24px;padding-top:20px}
+@media(max-width:900px){
+ .partner-feature{grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:24px}
+ .partner-feature .partner-lead{height:240px;min-height:240px}
+ .partner-feature .partner-lead img{height:160px}
+ .partner-main{grid-template-columns:repeat(4,minmax(0,1fr))}
+ .partner-main .pc{height:150px;min-height:150px;padding:14px}
+ .partner-main .pc .lg img{max-height:58px}
+ .partner-support{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:600px){
+ .partner-feature{grid-template-columns:1fr;gap:18px}
+ .partner-feature .partner-lead{grid-column:1;height:240px;min-height:240px}
+ .partner-feature .partner-lead img{height:160px}
+ .partner-story{grid-column:1}
+ .partner-story h3{font-size:26px}
+ .partner-story p{font-size:14px}
+ .partner-main{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ .partner-main .pc{height:150px;min-height:150px}
+ .partner-support{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+ .partner-support .pc{height:112px;min-height:112px;padding:9px;gap:5px}
+ .partner-support .pc .lg{height:46px}
+ .partner-support .pc .lg img{max-height:42px}
+ .partner-support .pc .tl{font-size:15px}
+}
+
+.partner-support .pc-rso .lg{height:100%}
+.partner-support .pc-rso .lg img{height:100%;max-height:100%;width:auto;max-width:100%;object-fit:contain}
+
+.map .pin{margin-left:var(--pin-dx);margin-top:var(--pin-dy)}
+@media(max-width:600px){
+ .mphead{gap:12px;margin-bottom:22px}
+ .mphead h2{margin:0}
+ .mright{padding:0;gap:8px}
+ .mright .place{margin:0;font-size:16px;line-height:1.45}
+ .mright p{font-size:14px;line-height:1.5}
+ .map-canvas{min-width:0}
+ .map .pin{width:12px;height:12px;font-size:6px;border-width:1px;margin-left:calc(var(--pin-dx)*.35);margin-top:calc(var(--pin-dy)*.25);box-shadow:0 1px 3px #14213a30}
+ .map .pin:after{inset:-7px}
+ .map{border-radius:16px}
+}
+
+.reg-actions{display:flex;gap:12px;flex-wrap:wrap}
+.reg .reg-rules{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px #fff}
+@media(max-width:600px){
+ .reg{background:var(--red);padding:30px 0}
+ .reg:before{display:block;font-size:clamp(130px,36vw,210px);right:-12px;top:50%;opacity:.08;pointer-events:none}
+ .reg .wrap{display:block;background:transparent;padding:0 22px;border-radius:0}
+ .reg h2{font-size:25px;line-height:1.2;max-width:260px;margin:0 0 24px;letter-spacing:-.03em}
+ .reg-actions{display:grid;grid-template-columns:1fr;gap:10px}
+ .reg .btn{justify-content:center;width:100%;min-height:50px;padding:14px 10px;border-radius:12px;font-family:Manrope,sans-serif;font-size:14px;font-weight:800;line-height:1.3;text-transform:none;box-shadow:none}
+ .reg .reg-rules{box-shadow:inset 0 0 0 1px #ffffff80;background:#ffffff08}
+}
 </style>
 </head>
 <body>
@@ -368,7 +501,7 @@ footer .wrap{font-size:15px}
    <a href="https://vk.com/" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте"><img src="img/vk.svg" alt=""></a>
   </div>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Меню</button>
-  <nav class="nav" id="site-nav" aria-label="Разделы"><a href="#letter">О гонке</a><a href="#aud">Фестиваль</a><a href="#friends">Друзья Гонки</a><a href="#past">2026</a><a href="#program">Программа</a><a href="#map-sec">Трасса</a><a href="#partners">Партнёры</a></nav>
+  <nav class="nav" id="site-nav" aria-label="Разделы"><a href="#letter">О Гонке</a><a href="#aud">Фестиваль</a><a href="#friends">Друзья Гонки</a><a href="#past">2026</a><a href="#program">Программа</a><a href="#map-sec">Трасса</a><a href="#partners">Партнёры</a></nav>
   <a class="btn hreg" href="https://reg.legkovrace.ru/" target="_blank" rel="noopener">Регистрация</a>
  </div>
 </header>
@@ -390,14 +523,14 @@ footer .wrap{font-size:15px}
  <div class="wrap lt">
   <div class="ph rv">
    <img src="img/legkov.jpg" loading="lazy" decoding="async" width="640" height="960" alt="Александр Легков">
-   <div class="cap"><b>Александр Легков</b><span>Олимпийский чемпион Сочи-2014 и основатель гонки</span></div>
+   <div class="cap"><b>Александр Легков</b><span>Олимпийский чемпион Сочи-2014 и основатель Гонки</span></div>
   </div>
   <div class="rv" id="history">
    <div class="q" aria-hidden="true">“</div>
    <p>Друзья, моя команда организует фестиваль с 2015 года. За 12 лет нашей работы на лыжи встали десятки тысяч людей в нашей стране. Проект давно вырос в большой лыжный фестиваль, где на одной трассе встречаются профессиональные спортсмены, любители, дети и семьи.</p>
-   <p>Идея гонки остаётся неизменной: сделать атмосферу большого спорта доступной каждому.</p>
+   <p>Идея Гонки остаётся неизменной: сделать атмосферу большого спорта доступной каждому.</p>
    <p>Приглашаю вас присоединиться к нашему празднику и провести эти дни вместе с нами!</p>
-   <div class="sign"><i>А. Легков</i></div>
+   <div class="sign"><i>Александр Легков</i></div>
   </div>
  </div>
 </section>
@@ -407,11 +540,11 @@ footer .wrap{font-size:15px}
   <div class="hrow rv"><h2>Фестиваль<br>для каждого</h2><p>Проверьте себя на лыжне, поддержите близких у трассы или проведите зимний день в Лужниках всей семьёй.</p></div>
   <div class="grid6">
    <a class="card hl rv" href="#program"><img src="img/img-02.jpg" alt="" loading="lazy" decoding="async"><span class="ar" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span><h3>Лыжникам</h3><p>Выберите старт на скорость, 10 км или парную эстафету.</p></a>
-   <a class="card rv" href="#day-14"><img src="img/img-08.jpg" alt="" loading="lazy" decoding="async"><span class="ar" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span><h3>Детям</h3><p>Три дистанции по возрасту. Участие бесплатное по регистрации.</p></a>
-   <a class="card rv" href="#map-sec"><img src="img/img-04.jpg" alt="" loading="lazy" decoding="async"><span class="ar" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span><h3>Зрителям</h3><p>Поддержите своих на трассе и посмотрите спринт профессионалов и эстафету звёзд.</p></a>
+   <a class="card rv" href="#day-14"><img src="img/img-07.jpg" alt="Юная участница Гонки Легкова с лыжами и медалью" style="object-position:50% 35%" loading="lazy" decoding="async"><span class="ar" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span><h3>Детям</h3><p>Три дистанции по возрасту. Участие бесплатное по регистрации.</p></a>
+   <a class="card rv" href="#map-sec"><img src="img/spectators-card.jpg" alt="Болельщики на трибунах Гонки Легкова" loading="lazy" decoding="async"><span class="ar" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span><h3>Зрителям</h3><p>Поддержите своих на трассе и посмотрите спринт профессионалов и эстафету звёзд.</p></a>
    <a class="card rv" href="https://reg.legkovrace.ru/" target="_blank" rel="noopener"><img src="img/img-05.jpg" alt="" loading="lazy" decoding="async"><span class="ar" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span><h3>Медиа и прессе</h3><p>Запросите аккредитацию для освещения фестиваля.</p></a>
    <a class="card rv" href="https://reg.legkovrace.ru/" target="_blank" rel="noopener"><img src="img/img-06.jpg" alt="" loading="lazy" decoding="async"><span class="ar" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span><h3>Волонтёрам</h3><p>Присоединяйтесь к команде, которая помогает провести фестиваль.</p></a>
-   <a class="card rv" href="https://reg.legkovrace.ru/" target="_blank" rel="noopener"><img src="img/img-07.jpg" alt="" loading="lazy" decoding="async"><span class="ar" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span><h3>Партнёрам</h3><p>Обсудите с организаторами, как ваш бренд может участвовать в фестивале.</p></a>
+   <a class="card rv" href="https://reg.legkovrace.ru/" target="_blank" rel="noopener"><img src="img/partners-card.jpg" alt="Партнёрские бренды в финишной зоне Гонки Легкова" style="object-position:65% 50%" loading="lazy" decoding="async"><span class="ar" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span><h3>Партнёрам</h3><p>Обсудите с организаторами, как ваш бренд может участвовать в фестивале.</p></a>
   </div>
  </div>
 </section>
@@ -458,19 +591,27 @@ footer .wrap{font-size:15px}
       <tbody>
       <tr class="prow">
        <th scope="row" class="ptime">08:00–21:00</th>
-       <td><div class="event"><div><b>Выдача стартовых комплектов</b></div></div></td>
+       <td><div class="event"><div><b>Выдача стартовых номеров в шатре (все дисциплины)</b><span>Выдача на пятницу, субботу и воскресенье</span></div></div></td>
+      </tr>
+      <tr class="prow">
+       <th scope="row" class="ptime">08:00–21:00</th>
+       <td><div class="event"><div><b>Работа зоны болельщика</b></div></div></td>
+      </tr>
+      <tr class="prow">
+       <th scope="row" class="ptime">08:00–21:00</th>
+       <td><div class="event"><div><b>Работа камеры хранения</b></div></div></td>
       </tr>
       <tr class="prow entry">
-       <th scope="row" class="ptime">09:00–19:30</th>
-       <td><div class="event"><div><b>Гонка Легкова. Скорость</b><span>3,3 км · 17+ · раздельный старт · 1 000 ₽</span></div><a class="btn" href="https://reg.legkovrace.ru/" target="_blank" rel="noopener" aria-label="Регистрация: Гонка Легкова. Скорость, 09:00–19:30">Участвовать</a></div></td>
+       <th scope="row" class="ptime">09:00</th>
+       <td><div class="event"><div><b>Открытие старта индивидуальной гонки СКОРОСТЬ</b></div><a class="btn" href="https://reg.legkovrace.ru/" target="_blank" rel="noopener" aria-label="Регистрация — Открытие старта индивидуальной гонки СКОРОСТЬ, 09:00">Участвовать</a></div></td>
       </tr>
       <tr class="prow">
-       <th scope="row" class="ptime">14:40–15:20</th>
-       <td><div class="event"><div><b>Пролог профессионалов</b><span>Раздельный старт через 30 секунд. Движение любителей по трассе ограничено.</span></div></div></td>
+       <th scope="row" class="ptime">20:30</th>
+       <td><div class="event"><div><b>Крайнее время для старта гонки СКОРОСТЬ</b></div></div></td>
       </tr>
       <tr class="prow">
-       <th scope="row" class="ptime">19:30–20:00</th>
-       <td><div class="event"><div><b>Завершение прохождения дистанции «Скорость»</b></div></div></td>
+       <th scope="row" class="ptime">21:00</th>
+       <td><div class="event"><div><b>Закрытие финиша индивидуальной гонки СКОРОСТЬ</b></div></div></td>
       </tr>
       </tbody>
      </table>
@@ -481,16 +622,44 @@ footer .wrap{font-size:15px}
       <thead><tr><th scope="col">Время</th><th scope="col">Событие</th></tr></thead>
       <tbody>
       <tr class="prow">
-       <th scope="row" class="ptime">08:00–21:00</th>
-       <td><div class="event"><div><b>Выдача стартовых комплектов</b></div></div></td>
+       <th scope="row" class="ptime">08:00–19:00</th>
+       <td><div class="event"><div><b>Работа зоны болельщика</b></div></div></td>
+      </tr>
+      <tr class="prow">
+       <th scope="row" class="ptime">08:00–20:00</th>
+       <td><div class="event"><div><b>Работа детского клуба</b></div></div></td>
+      </tr>
+      <tr class="prow">
+       <th scope="row" class="ptime">08:00–20:00</th>
+       <td><div class="event"><div><b>Выдача стартовых номеров</b></div></div></td>
+      </tr>
+      <tr class="prow">
+       <th scope="row" class="ptime">08:00–20:00</th>
+       <td><div class="event"><div><b>Работа взрослой камеры хранения</b></div></div></td>
+      </tr>
+      <tr class="prow">
+       <th scope="row" class="ptime">08:30–19:00</th>
+       <td><div class="event"><div><b>Работа зоны финишного питания</b></div></div></td>
+      </tr>
+      <tr class="prow">
+       <th scope="row" class="ptime">09:00–20:00</th>
+       <td><div class="event"><div><b>Работа зоны гравировки</b></div></div></td>
       </tr>
       <tr class="prow entry">
-       <th scope="row" class="ptime">09:30–17:15</th>
-       <td><div class="event"><div><b>Гонка Легкова. Любители</b><span>10 км · 17+ · старт волнами · 2 500–3 500 ₽ в зависимости от слота. Контрольное время 1 ч 10 мин.</span></div><a class="btn" href="https://reg.legkovrace.ru/" target="_blank" rel="noopener" aria-label="Регистрация: Гонка Легкова. Любители, 09:30–17:15">Участвовать</a></div></td>
+       <th scope="row" class="ptime">09:30</th>
+       <td><div class="event"><div><b>Начало стартов на 10 км у любителей</b></div><a class="btn" href="https://reg.legkovrace.ru/" target="_blank" rel="noopener" aria-label="Регистрация — Начало стартов на 10 км у любителей, 09:30">Участвовать</a></div></td>
       </tr>
       <tr class="prow love entry">
        <th scope="row" class="ptime">17:30</th>
-       <td><div class="event"><div><b>Любовь и Лыжи</b><span>Парная эстафета · 17+ · один мужчина и одна женщина · 2 500 ₽ за команду. Длина этапа уточняется.</span></div><a class="btn" href="https://reg.legkovrace.ru/" target="_blank" rel="noopener" aria-label="Регистрация: Любовь и Лыжи, 17:30">Участвовать</a></div></td>
+       <td><div class="event"><div><b>Старт гонки Любовь и лыжи, кластер&nbsp;1</b></div><a class="btn" href="https://reg.legkovrace.ru/" target="_blank" rel="noopener" aria-label="Регистрация — Старт гонки Любовь и лыжи, кластер 1, 17:30">Участвовать</a></div></td>
+      </tr>
+      <tr class="prow love entry">
+       <th scope="row" class="ptime">18:00</th>
+       <td><div class="event"><div><b>Старт гонки Любовь и лыжи, кластер&nbsp;2</b></div><a class="btn" href="https://reg.legkovrace.ru/" target="_blank" rel="noopener" aria-label="Регистрация — Старт гонки Любовь и лыжи, кластер 2, 18:00">Участвовать</a></div></td>
+      </tr>
+      <tr class="prow love">
+       <th scope="row" class="ptime">18:30</th>
+       <td><div class="event"><div><b>Закрытие финиша гонки Любовь и лыжи</b></div></div></td>
       </tr>
       </tbody>
      </table>
@@ -502,27 +671,47 @@ footer .wrap{font-size:15px}
       <tbody>
       <tr class="prow">
        <th scope="row" class="ptime">08:00–11:30</th>
-       <td><div class="event"><div><b>Выдача стартовых комплектов</b></div></div></td>
+       <td><div class="event"><div><b>Выдача детских стартовых номеров</b></div></div></td>
+      </tr>
+      <tr class="prow">
+       <th scope="row" class="ptime">08:00–16:30</th>
+       <td><div class="event"><div><b>Работа зоны болельщика</b></div></div></td>
+      </tr>
+      <tr class="prow">
+       <th scope="row" class="ptime">08:00–16:30</th>
+       <td><div class="event"><div><b>Работа детского клуба</b></div></div></td>
+      </tr>
+      <tr class="prow">
+       <th scope="row" class="ptime">08:00–16:30</th>
+       <td><div class="event"><div><b>Работа детской камеры хранения</b></div></div></td>
       </tr>
       <tr class="prow entry">
        <th scope="row" class="ptime">09:00</th>
-       <td><div class="event"><div><b>Гонка Легкова. Дети</b><span>3,3 км · 11–16 лет · бесплатно</span></div><a class="btn" href="https://reg.legkovrace.ru/" target="_blank" rel="noopener" aria-label="Регистрация: Гонка Легкова. Дети, 09:00">Участвовать</a></div></td>
+       <td><div class="event"><div><b>Старт детской гонки на 3,3 км</b></div><a class="btn" href="https://reg.legkovrace.ru/" target="_blank" rel="noopener" aria-label="Регистрация — Старт детской гонки на 3,3 км, 09:00">Участвовать</a></div></td>
       </tr>
       <tr class="prow entry">
        <th scope="row" class="ptime">10:00</th>
-       <td><div class="event"><div><b>Гонка Легкова. Дети</b><span>1 км · 7–10 лет · бесплатно</span></div><a class="btn" href="https://reg.legkovrace.ru/" target="_blank" rel="noopener" aria-label="Регистрация: Гонка Легкова. Дети, 10:00">Участвовать</a></div></td>
+       <td><div class="event"><div><b>Старт детской гонки на 1 км</b></div><a class="btn" href="https://reg.legkovrace.ru/" target="_blank" rel="noopener" aria-label="Регистрация — Старт детской гонки на 1 км, 10:00">Участвовать</a></div></td>
       </tr>
       <tr class="prow entry">
        <th scope="row" class="ptime">10:30</th>
-       <td><div class="event"><div><b>Гонка Легкова. Дети</b><span>300 м · до 6 лет включительно · бесплатно</span></div><a class="btn" href="https://reg.legkovrace.ru/" target="_blank" rel="noopener" aria-label="Регистрация: Гонка Легкова. Дети, 10:30">Участвовать</a></div></td>
+       <td><div class="event"><div><b>Старт детской гонки на 300 м</b></div><a class="btn" href="https://reg.legkovrace.ru/" target="_blank" rel="noopener" aria-label="Регистрация — Старт детской гонки на 300 м, 10:30">Участвовать</a></div></td>
       </tr>
       <tr class="prow">
-       <th scope="row" class="ptime">12:00</th>
-       <td><div class="event"><div><b>Окончание детских стартов</b></div></div></td>
+       <th scope="row" class="ptime">11:00–13:30</th>
+       <td><div class="event"><div><b>Работа зоны финишного питания</b></div></div></td>
       </tr>
       <tr class="prow">
-       <th scope="row" class="ptime">13:00–15:00</th>
-       <td><div class="event"><div><b>Профессионалы и Звёзды</b><span>Профессиональный спринт 1,8 км: четвертьфиналы, полуфиналы и финалы. Эстафета звёзд: 6 этапов по 300 м.</span></div></div></td>
+       <th scope="row" class="ptime">12:00–12:20</th>
+       <td><div class="event"><div><b>Награждение детской гонки на 1 км и 3,3 км</b><span>7-8, 9-10, 11-12, 13-14, 15-16 лет</span></div></div></td>
+      </tr>
+      <tr class="prow">
+       <th scope="row" class="ptime">13:30</th>
+       <td><div class="event"><div><b>Старт гонки профессионалов (спринты)</b></div></div></td>
+      </tr>
+      <tr class="prow">
+       <th scope="row" class="ptime">15:30</th>
+       <td><div class="event"><div><b>Начало церемонии награждения гонки профессионалов</b></div></div></td>
       </tr>
       </tbody>
      </table>
@@ -530,7 +719,7 @@ footer .wrap{font-size:15px}
    </div>
   </div>
   <div class="pnote">
-   <p>Расписание, взносы и условия предварительные.</p>
+   <p>Условия участия и стартовые взносы указаны в Положении.</p>
    <p>Для участия нужен медицинский допуск. Возраст определяется на 12 февраля 2027 года. Для детских стартов потребуется заявление законного представителя.</p>
    <a href="polozhenie.html#participation">Условия участия в проекте Положения →</a>
   </div>
@@ -539,54 +728,103 @@ footer .wrap{font-size:15px}
 
 <section class="mp" id="map-sec">
  <div class="wrap">
-  <div class="mphead rv"><h2>Место проведения фестиваля</h2><div class="mright"><div class="place">12–14 февраля · Лужники, Москва</div><p style="color:var(--mut)">Нажмите на точки карты, чтобы узнать, что где находится. Схема показывает расположение зон в 2026 году. Схема фестиваля 2027 года будет опубликована отдельно.</p></div></div>
+  <div class="mphead rv"><h2>Трасса в Лужниках</h2><div class="mright"><div class="place">12–14 февраля · Лужники, Москва</div><p style="color:var(--mut)">Следуйте за стрелками, чтобы изучить маршрут. Выберите точку на схеме, чтобы изучить мосты, прямые участки и развороты.</p></div></div>
   <div class="mapbox rv">
-   <div class="map" id="map"><svg viewBox="25 225 765 495" class="msvg" role="img" aria-label="Схема трассы Гонки Легкова">
-<defs><pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#c3d1e6"/></pattern>
-<clipPath id="vb"><rect x="25" y="225" width="765" height="495"/></clipPath></defs>
-<g clip-path="url(#vb)">
-<rect x="0" y="0" width="900" height="900" fill="#dce6f3"/><rect x="0" y="0" width="900" height="900" fill="url(#dots)"/>
-<g fill="#cfdbec"><rect x="90" y="225" width="150" height="80" rx="14" transform="rotate(-30 165 265)"/><rect x="300" y="240" width="120" height="70" rx="14" transform="rotate(-30 360 275)"/><rect x="600" y="420" width="130" height="80" rx="14" transform="rotate(-30 665 460)"/><ellipse cx="610" cy="700" rx="80" ry="50" transform="rotate(-30 610 700)"/><rect x="25" y="420" width="70" height="120" rx="14"/></g>
-<g stroke="#eef3fa" stroke-linecap="round" fill="none"><path d="M330 120 L860 690" stroke-width="30"/><path d="M0 520 L150 445" stroke-width="18"/><circle cx="263" cy="577" r="160" stroke-width="16"/></g>
-<text x="690" y="560" transform="rotate(47 690 560)" font-family="Manrope" font-size="12" font-weight="800" letter-spacing="2" fill="#8d9bb3">УЛ. ЛУЖНИКИ</text>
-<g transform="translate(263 577)"><ellipse rx="124" ry="118" fill="#1d3156"/><ellipse rx="64" ry="60" fill="#dce6f3"/>
-<g stroke="#dce6f3" stroke-width="3"><path d="M0 -60V-118" transform="rotate(25)"/><path d="M0 -60V-118" transform="rotate(100)"/><path d="M0 -60V-118" transform="rotate(195)"/><path d="M0 -60V-118" transform="rotate(278)"/></g>
-<g fill="#fff" font-family="Unbounded" font-weight="700" font-size="17" text-anchor="middle" dominant-baseline="middle"><text x="-52" y="-72">B</text><text x="78" y="-50">C</text><text x="-88" y="25">A</text><text x="55" y="88">D</text></g></g>
-<g transform="translate(515 462) rotate(-38)"><rect x="-44" y="-15" width="88" height="30" rx="8" fill="#1d3156"/><text y="1" text-anchor="middle" dominant-baseline="middle" fill="#fff" font-family="Unbounded" font-weight="700" font-size="12" letter-spacing="1">ЭКСПО</text></g>
-<g stroke="#1d3156" stroke-width="5" fill="none" stroke-linecap="round"><path d="M440 312 Q470 318 492 340"/><path d="M425 360 Q452 362 470 384"/></g>
-<path id="route" d="M565 550 L710 690 Q733 707 744 680 Q750 660 733 642 L500 380 Q478 352 450 338 Q425 328 400 342 L345 372 L240 356 L172 372 L72 268 Q57 252 46 266 Q38 278 52 290 L180 398 L330 412 L392 420 Q430 430 442 458 L412 500 Q398 520 412 530 L478 532" fill="none" stroke="#c40a1a" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
-<path d="M565 550 L710 690 Q733 707 744 680 Q750 660 733 642 L500 380 Q478 352 450 338 Q425 328 400 342 L345 372 L240 356 L172 372 L72 268 Q57 252 46 266 Q38 278 52 290 L180 398 L330 412 L392 420 Q430 430 442 458 L412 500 Q398 520 412 530 L478 532" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="8 12" stroke-linecap="round" class="flow"/>
-<circle r="7" fill="#fff" stroke="#c40a1a" stroke-width="3.5"><animateMotion dur="16s" repeatCount="indefinite"><mpath href="#route"/></animateMotion></circle>
-<g font-family="Unbounded" font-weight="700" font-size="10" text-anchor="middle" dominant-baseline="middle"><g transform="translate(565 598)"><rect x="-30" y="-11" width="60" height="22" rx="11" fill="#c40a1a"/><text y="1" fill="#fff">СТАРТ</text></g><g transform="translate(478 578)"><rect x="-32" y="-11" width="64" height="22" rx="11" fill="#1d3156"/><text y="1" fill="#fff">ФИНИШ</text></g></g>
-</g></svg></div>
-   <div class="info"><span class="lbl" id="iLbl">Точка 1</span><h3 id="iT"></h3><p id="iD"></p><ul id="iL"></ul><div class="dist"><span>Гонка Легкова. Скорость</span><b>3,3 км</b></div></div>
+   <div class="map" id="map"><div class="map-canvas">
+    <svg viewBox="0 0 1600 755" class="msvg" role="img" aria-labelledby="course-title course-description">
+     <title id="course-title">Трасса Гонки Легкова в Лужниках</title>
+     <desc id="course-description">Маршрут огибает Большую спортивную арену, проходит через два моста и развороты вдоль улицы Лужники. Стрелки показывают направление движения.</desc>
+     <defs>
+      <pattern id="course-grid" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".8" fill="#c5d3e6"/></pattern>
+      <path id="route" d="M862 302 H1150 Q1162 302 1162 290 V222 Q1162 211 1150 211 H613 V365 Q613 381 601 377 Q592 375 592 365 V222 Q592 211 580 211 H414 V470 Q414 479 402 482 C295 508 232 580 201 655 Q198 666 186 666 H112 Q100 666 105 651 C140 521 230 425 383 390 Q394 387 394 375 V205 Q394 194 406 194 H580 Q592 194 592 182 V100 Q592 89 604 89 H1160 Q1170 89 1170 101 V120 Q1170 131 1158 131 H1027 Q1018 131 1015 119 L1011 112 Q1008 103 1000 103 H628 Q617 103 617 115 V181 Q617 193 629 193 H1184 Q1196 193 1196 205 V312 Q1196 324 1184 324 H874"/>
+     </defs>
+     <rect width="1600" height="755" fill="#e8eef6"/>
+     <rect width="1600" height="755" fill="url(#course-grid)"/>
+     <g fill="#d7e3ef">
+      <path d="M0 104H132V160H0ZM0 180H160V330H215V264Q340 260 375 205V390Q188 454 105 630H0Z"/>
+      <path d="M630 104H1350V155H630ZM638 213H802V338H990V380H638ZM640 390L790 454 870 575 810 640 640 515Z"/>
+      <path d="M1010 390H1300L1380 670H900L860 570 950 490Z"/>
+     </g>
+     <g fill="none" stroke="#fff" stroke-width="8">
+      <path d="M0 68H1375M1440 0L1515 755M508 190V440M425 210V490M620 210V520M1015 165H1300M820 215V320Q820 339 840 339H1285M0 670H1410"/>
+      <path d="M425 520Q600 490 760 635M940 635H1390M900 670V755M1100 670V755M1300 670V755"/>
+      <ellipse cx="514" cy="777" rx="298" ry="265" stroke-width="12"/>
+     </g>
+     <g fill="#c8d6e8" stroke="#bccce0" stroke-width="2">
+      <rect x="174" y="122" width="96" height="120" rx="8"/>
+      <rect x="1460" y="202" width="160" height="475" rx="12" transform="rotate(-9 1460 202)"/>
+      <rect x="1030" y="343" width="130" height="28" rx="4"/>
+      <rect x="1010" y="685" width="250" height="90" rx="8"/>
+      <path d="M320 105A52 52 0 0 0 376 156V141A37 37 0 0 1 337 105ZM631 141A39 39 0 0 0 675 105H692A55 55 0 0 1 631 158Z"/>
+     </g>
+     <g fill="#f4f7fb" stroke="#d0ddeb" stroke-width="2">
+      <rect x="1115" y="557" width="95" height="50" rx="5"/><rect x="1248" y="579" width="36" height="27" rx="4"/>
+      <path d="M203 390L285 342 319 382 232 430ZM697 344L808 390 789 421 680 382Z"/>
+     </g>
+     <g transform="translate(514 777)">
+      <ellipse rx="270" ry="240" fill="#1d3156"/>
+      <ellipse rx="179" ry="155" fill="#d7e3ef"/>
+      <ellipse rx="247" ry="217" fill="none" stroke="#354b70" stroke-width="2"/>
+      <g stroke="#e8eef6" stroke-width="5"><path d="M-226 -132L-154 -78M0 -240V-155M225 -133L151 -78"/></g>
+      <text y="-185" text-anchor="middle" fill="#fff" font-size="17" font-weight="800" letter-spacing="2">БОЛЬШАЯ СПОРТИВНАЯ АРЕНА</text>
+     </g>
+     <g transform="translate(1110 450)">
+      <rect x="-142" y="-72" width="284" height="144" rx="72" fill="#d0dfee" stroke="#c2d3e5" stroke-width="5"/>
+      <rect x="-116" y="-47" width="232" height="94" rx="47" fill="#e3ecf5"/>
+     </g>
+     <g fill="#7caec2"><rect x="435" y="182" width="126" height="42" rx="4"/><rect x="1048" y="183" width="86" height="40" rx="4"/></g>
+     <g fill="#526782" font-size="13" font-weight="800" letter-spacing="2">
+      <text x="720" y="62" text-anchor="middle">УЛ. ЛУЖНИКИ</text>
+      <text x="1260" y="91">ПЕШЕХОДНАЯ ЗОНА</text>
+      <text x="498" y="174" text-anchor="middle">МОСТ</text><text x="1091" y="175" text-anchor="middle">МОСТ</text>
+     </g>
+     <use href="#route" fill="none" stroke="#fff" stroke-width="20" stroke-linejoin="round" stroke-linecap="round"/>
+     <use href="#route" class="course-line" fill="none" stroke="var(--red)" stroke-width="11" stroke-linejoin="round" stroke-linecap="round" pathLength="1"/>
+     <g id="course-arrows" fill="#fff" aria-hidden="true"></g>
+    </svg>
+   </div></div>
+   <div class="info"><span class="lbl" id="iLbl">На трассе</span><h3 id="iT"></h3><p id="iD"></p><ul id="iL"></ul><div class="course-key"><span></span>Направление движения</div></div>
   </div>
  </div>
 </section>
 
 
 <section class="reg" id="register">
- <div class="wrap"><h2>Выбери свой старт</h2><div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" href="https://reg.legkovrace.ru/" target="_blank" rel="noopener">Зарегистрироваться</a><a class="btn" href="polozhenie.html" style="background:transparent;color:#fff;box-shadow:inset 0 0 0 2px #fff">Положение о гонке</a></div></div>
+ <div class="wrap"><h2>Выбери свой старт</h2><div class="reg-actions"><a class="btn" href="https://reg.legkovrace.ru/" target="_blank" rel="noopener">Зарегистрироваться</a><a class="btn reg-rules" href="polozhenie.html">Положение о Гонке</a></div></div>
 </section>
 
 <section class="pt" id="partners">
  <div class="wrap">
   <div class="hrow rv"><h2>Партнёры Гонки</h2></div>
-  <div class="partner-grid rv">
- <a class="partner-lead" href="https://www.sberbank.ru" target="_blank" rel="noopener noreferrer">
-  <span class="pr">Генеральный партнёр</span>
-  <img src="img/partners/sber-185.svg" alt="Сбер" loading="lazy">
- </a>
+  <div class="partner-feature rv">
+   <a class="partner-lead" href="https://www.sberbank.ru" target="_blank" rel="noopener noreferrer">
+    <img src="img/partners/sber-185.svg" alt="Сбер" loading="lazy">
+   </a>
+   <div class="partner-story">
+    <span class="pr">Стратегический партнёр</span>
+    <h3>Сбер</h3>
+    <p>Сбер поддерживает Гонку Легкова — лыжный фестиваль для профессионалов, любителей и семей с детьми.</p>
+    <a class="partner-link" href="https://www.sberbank.ru" target="_blank" rel="noopener noreferrer">О партнёре ↗</a>
+   </div>
+  </div>
+  <div class="partner-grid partner-main rv">
    <a class="pc" href="https://www.tn.ru" target="_blank" rel="noopener noreferrer"><div class="lg"><img src="img/partners/tn.svg" alt="Технониколь" loading="lazy"></div></a>
    <a class="pc" href="https://www.phosagro.ru" target="_blank" rel="noopener noreferrer"><div class="lg"><img src="img/partners/phosagro.svg" alt="ФосАгро" loading="lazy"></div></a>
-   <div class="pc"><div class="lg"><span class="tl" style="color:#e30613">МАТЧ ТВ</span></div><div><span class="pr">Медиапартнёр</span></div></div>
    <a class="pc" href="https://www.rzd.ru" target="_blank" rel="noopener noreferrer"><div class="lg"><img src="img/partners/rzd.svg?v=2" alt="ОАО «РЖД»" loading="lazy"></div></a>
    <a class="pc" href="https://www.mos.ru" target="_blank" rel="noopener noreferrer"><div class="lg"><img src="img/partners/moscow.svg" alt="Герб Москвы" loading="lazy"></div><div><span class="pr">При поддержке</span><b>Правительства Москвы</b></div></a>
+  </div>
+  <div class="partner-grid partner-support rv">
    <a class="pc" href="https://lukoil.ru" target="_blank" rel="noopener noreferrer"><div class="lg"><img src="img/partners/lukoil.svg" alt="ЛУКОЙЛ" loading="lazy"></div></a>
    <a class="pc" href="https://abdevelopment.ru" target="_blank" rel="noopener noreferrer"><div class="lg"><img src="img/partners/abd.svg" alt="AB Development" loading="lazy"></div></a>
    <div class="pc"><div class="lg"><span class="tl" style="color:#111">ПАРИ</span></div></div>
    <div class="pc"><div class="lg"><img src="img/partners/elswell.svg" alt="ELSWELL" loading="lazy"></div></div>
-   <a class="pc" href="https://rusport.org" target="_blank" rel="noopener noreferrer"><div class="lg"><img class="rso" src="img/rso-logo.png" alt="Русское спортивное общество" loading="lazy"></div><div><span class="pr">Технологический партнёр</span></div></a>
+   <a class="pc pc-rso" href="https://rusport.org" target="_blank" rel="noopener noreferrer"><div class="lg"><img class="rso" src="img/rso-logo.png" alt="Русское спортивное общество" loading="lazy"></div></a>
+  </div>
+  <div class="partner-media">
+   <h3 class="rv">Информационные партнёры</h3>
+   <div class="partner-grid partner-support rv">
+   <div class="pc"><div class="lg"><span class="tl" style="color:#e30613">МАТЧ ТВ</span></div></div>
+   </div>
   </div>
  </div>
 </section>
@@ -595,7 +833,7 @@ footer .wrap{font-size:15px}
  <div class="wrap">
   <div class="ftop">
    <div class="fcol"><b>Участникам</b><a href="https://reg.legkovrace.ru/" target="_blank" rel="noopener">Регистрация</a><a href="#program">Форматы</a><a href="#map-sec">Карта трассы</a><a href="polozhenie.html">Положение</a></div>
-   <div class="fcol"><b>О гонке</b><a href="#past">Как это было</a><a href="#history">Обращение Легкова</a><a href="#friends">Друзья Гонки</a></div>
+   <div class="fcol"><b>О Гонке</b><a href="#past">Как это было</a><a href="#history">Обращение Легкова</a><a href="#friends">Друзья Гонки</a></div>
    <div class="fcol"><b>Партнёрам</b><a href="#partners">Партнёры</a><a href="mailto:info@legkovrace.ru">info@legkovrace.ru</a></div>
    <div class="fcol"><b>Мы в соцсетях</b><div class="soc"><a href="https://t.me/" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><img src="img/tg.svg" alt=""></a><a href="https://vk.com/" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте"><img src="img/vk.svg" alt=""></a></div><a class="btn" href="https://reg.legkovrace.ru/" target="_blank" rel="noopener">Зарегистрироваться</a></div>
   </div>
@@ -630,20 +868,105 @@ const A=[['Nagorny.png','Никита Нагорный',['Олимпийский
 ['Borzakovsky.png','Юрий Борзаковский',['Олимпийский чемпион по лёгкой атлетике']]];
 document.getElementById('amb').innerHTML=A.map(a=>`<div class="am rv"><div class="im"><img src="img/${a[0]}" alt="${a[1]}" loading="lazy" decoding="async"></div><div class="t"><b>${a[1]}</b>${a[2].map(t=>`<span>${t}</span>`).join('')}</div></div>`).join('');
 
-// map
-const P=[[565,550,'Старт','Стартовый городок рядом с Большой спортивной ареной. Разминка, стартовые коридоры и электронный хронометраж.'],
-[742,688,'Разворот у ул. Лужники','Скоростной участок вдоль улицы Лужники и разворот на дальней петле.'],
-[452,338,'Мост','Пешеходный мост для зрителей — лучшая точка для поддержки участников на трассе.'],
-[255,405,'Стадион «Лужники»','Трасса проходит вдоль Большой спортивной арены: зрительская зона, обогрев, фуд-корт и семейные активности.'],
-[46,270,'Дальний разворот','Дальняя точка трассы у Малой спортивной арены — зона технических служб и медиков.'],
-[440,455,'Экспо','Выставка партнёров, выдача стартовых пакетов, мастер-классы и прокат инвентаря.'],
-[478,532,'Финиш','Финишная зона: медали, горячий чай, фотозона и онлайн-результаты сразу после финиша.']].map(p=>[(p[0]-25)/7.65,(p[1]-225)/4.95,p[2],p[3]]);
+// Course landmarks and direction arrows
+const P=[
+ [862,302,'Начало маршрута','Движение начинается на внутренней прямой восточной петли. Отсюда трасса идёт вправо, к первому повороту.'],
+ [1162,265,'Первый поворот','В конце прямой маршрут поворачивает налево и поднимается к поперечному участку. Далее движение продолжается в сторону западного моста.'],
+ [1091,211,'Восточный мост · вперед','Первое прохождение восточного моста — справа налево по нижней из двух параллельных линий. Впереди центральная петля.'],
+ [601,377,'Центральная петля','Трасса уходит вниз и огибает узкий разворот. По соседней линии маршрут возвращается вверх, затем поворачивает к западному мосту.'],
+ [498,211,'Западный мост · вперед','После центральной петли движение продолжается влево через западный мост. За мостом начинается длинная прямая к арене.'],
+ [273,550,'Дуга у арены','Прямая переходит в плавную дугу вдоль Большой спортивной арены. Маршрут спускается к самой нижней точке схемы.'],
+ [150,666,'Нижний разворот','Короткий поперечный участок соединяет две дуги у арены. После разворота движение продолжается по внешней линии вверх.'],
+ [394,340,'Возвращение к мосту','Внешняя дуга выводит на прямую с левой стороны схемы. По ней маршрут возвращается к западному мосту.'],
+ [498,194,'Западный мост · обратно','Второе прохождение западного моста идёт слева направо по верхней линии. Сразу за мостом трасса поворачивает вверх к улице Лужники.'],
+ [850,89,'Вдоль улицы Лужники','Самая верхняя прямая проходит вдоль улицы. Направление движения — слева направо, к развороту на восточной стороне.'],
+ [1170,112,'Верхний разворот','Маршрут огибает правый край верхней петли и возвращается влево. Небольшой изгиб выводит на внутреннюю прямую.'],
+ [800,103,'Обратная прямая','Движение продолжается влево вдоль улицы Лужники. В конце прямой трасса поворачивает вниз и выходит на длинный поперечный участок.'],
+ [1091,193,'Восточный мост · обратно','Второе прохождение восточного моста — слева направо по верхней линии. За мостом маршрут поворачивает вниз, затем возвращается влево.'],
+ [874,324,'Конец маршрута','Заключительный участок проходит справа налево по внешней прямой восточной петли. Здесь заканчивается линия маршрута на схеме.']
+];
+const pointOffsets=[
+ [0,-26],[-28,0],[0,28],[30,4],[0,28],[22,20],[0,28],
+ [-28,0],[0,-36],[0,-30],[28,0],[0,28],[104,4],[0,28]
+];
 const M=document.getElementById('map'),L=document.getElementById('iL');
-P.forEach((p,i)=>{const b=document.createElement('button');b.className='pin';b.style.left=p[0]+'%';b.style.top=p[1]+'%';b.textContent=i+1;b.onclick=()=>sel(i);M.appendChild(b);
- const li=document.createElement('li');li.innerHTML=`<i>${i+1}</i>${p[2]}`;li.onclick=()=>sel(i);L.appendChild(li)});
-function sel(i){document.querySelectorAll('.pin').forEach((b,j)=>b.classList.toggle('on',i==j));L.querySelectorAll('li').forEach((b,j)=>b.classList.toggle('on',i==j));
- iLbl.textContent='Точка '+(i+1);iT.textContent=P[i][2];iD.textContent=P[i][3]}
-sel(0);
+P.forEach((point,index)=>{
+ const pin=document.createElement('button');
+ pin.className='pin';
+ pin.style.left=point[0]/16+'%';
+ pin.style.top=point[1]/7.55+'%';
+ pin.style.setProperty('--pin-dx',pointOffsets[index][0]+'px');
+ pin.style.setProperty('--pin-dy',pointOffsets[index][1]+'px');
+ pin.textContent=index+1;
+ pin.setAttribute('aria-label',point[2]);
+ pin.onclick=()=>selectLandmark(index);
+ M.querySelector('.map-canvas').appendChild(pin);
+ const item=document.createElement('li');
+ const button=document.createElement('button');
+ button.innerHTML='<i>'+(index+1)+'</i>'+point[2];
+ button.onclick=()=>selectLandmark(index);
+ item.appendChild(button);
+ L.appendChild(item);
+});
+function selectLandmark(index){
+ M.querySelectorAll('.pin').forEach((pin,i)=>{
+  pin.classList.toggle('on',i===index);
+  pin.setAttribute('aria-pressed',String(i===index));
+ });
+ L.querySelectorAll('button').forEach((button,i)=>{
+  button.classList.toggle('on',i===index);
+  button.setAttribute('aria-pressed',String(i===index));
+ });
+ document.getElementById('iT').textContent=P[index][2];
+ document.getElementById('iD').textContent=P[index][3];
+}
+selectLandmark(0);
+const coursePath=document.getElementById('route');
+const courseLength=coursePath.getTotalLength();
+const arrowGroup=document.getElementById('course-arrows');
+const arrowCount=Math.floor(courseLength/48);
+const arrows=Array.from({length:arrowCount},()=>{
+ const arrow=document.createElementNS('http://www.w3.org/2000/svg','path');
+ arrow.setAttribute('d','M-7 -1.5H1V-4L8 0 1 4V1.5H-7Z');
+ arrowGroup.appendChild(arrow);
+ return arrow;
+});
+const motionPreference=matchMedia('(prefers-reduced-motion: reduce)');
+let coursePaused=motionPreference.matches;
+let courseVisible=false;
+let courseFrame=0;
+let courseOffset=0;
+let lastCourseTime=0;
+function positionArrows(){
+ arrows.forEach((arrow,index)=>{
+  const distance=(index*courseLength/arrowCount+courseOffset)%courseLength;
+  const point=coursePath.getPointAtLength(distance);
+  const next=coursePath.getPointAtLength(Math.min(distance+1,courseLength));
+  const angle=Math.atan2(next.y-point.y,next.x-point.x)*180/Math.PI;
+  arrow.setAttribute('transform','translate('+point.x+' '+point.y+') rotate('+angle+')');
+ });
+}
+function animateCourse(time){
+ courseFrame=0;
+ if(coursePaused||!courseVisible||document.hidden)return;
+ if(lastCourseTime)courseOffset=(courseOffset+Math.min(time-lastCourseTime,64)*.018)%courseLength;
+ lastCourseTime=time;
+ positionArrows();
+ courseFrame=requestAnimationFrame(animateCourse);
+}
+function updateCourseMotion(){
+ cancelAnimationFrame(courseFrame);
+ lastCourseTime=0;
+ if(!coursePaused&&courseVisible&&!document.hidden)courseFrame=requestAnimationFrame(animateCourse);
+}
+motionPreference.addEventListener('change',event=>{coursePaused=event.matches;updateCourseMotion()});
+document.addEventListener('visibilitychange',updateCourseMotion);
+new IntersectionObserver(entries=>{
+ courseVisible=entries[0].isIntersecting;
+ updateCourseMotion();
+},{threshold:.05}).observe(M);
+positionArrows();
+updateCourseMotion();
 
 // reveal
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
